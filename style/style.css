@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Bagel Fat One";
-  src: url(".//fonts/bagel-fat-one-v2-latin_latin-ext-regular.woff2") format("truetype");
+  font-family: "Raleway";
+  src: url("./fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("./fonts/raleway-v37-latin_latin-ext-regular.woff2") format("truetype");
-  font-weight: 100 900;
+  font-family: "Bagel Fat One";
+  src: url(".//fonts/bagel-fat-one-v2-latin_latin-ext-regular.woff2") format("truetype");
   font-display: swap;
 }
 
