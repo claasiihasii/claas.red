@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Bagel Fat One";
+  src: url(".//fonts/bagel-fat-one-v2-latin_latin-ext-regular.woff2") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./fonts/raleway-v37-latin_latin-ext-regular.woff2") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --bg: rgb(30, 30, 30);
   --text: #F6F3EA;
@@ -16,6 +29,7 @@
 
 body{
     height: 100vh;
+    height: 100dvh;
     width: 100vw;
     background-color: var(--bg);
     margin: 0rem;
@@ -23,13 +37,11 @@ body{
 }
 
 .main {
+  position: relative;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100dvh;
 }
 
-/* unvisited link */
 a:link {
     text-decoration: none;
     color: var(--text);
@@ -37,36 +49,61 @@ a:link {
     font-size: 1.3rem;
 }
 
-/* visited link */
 a:visited {
   color: var(--text-visited);
 }
 
-/* mouse over link */
 a:hover {
   color: var(--text-hover);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-/* selected link */
 a:active {
   color: var(--text);
 }
 
+.footer-nav {
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
+  right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 3rem;
+}
+.footer-nav a {
+  font-family: "Bagel Fat One";
+  color: color-mix(in srgb, var(--text) 4%, var(--bg))
+}
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--text-hover);
+}
+
 .mail {
-    font-family: Raleway;
-    color: var(--text);
-    font-size: clamp(2.25rem, 9vw, 3rem);
-    font-weight: bolder;
-    text-align: center;
-    text-shadow: 0 1px 0 rgb(20 20 20 / .7), 0 -.5px 0 rgb(0 0 0 / .14);
-    transform: translateY(-5vh);
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  font-family: "Raleway", sans-serif;
+  color: var(--text);
+  font-size: clamp(2.25rem, 9vw, 3rem);
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0 1px 0 rgb(20 20 20 / .7), 0 -.5px 0 rgb(0 0 0 / .14);
+  transform: translate(-50%, -50%);
 }
 .mail a {
   display: block;
   margin-top: 0.5rem;
 }
 
+#czicon {
+  display: block;
+  width: min(70vw, 1500px);
+  height: auto;
+  max-height: 50dvh;
+  object-fit: contain;
+}
 
 .surname {
     text-transform: uppercase;

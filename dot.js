@@ -2,7 +2,10 @@ const dot = document.querySelector('.dot');
 const root = document.documentElement;
 
 function toggleTheme() {
-  root.classList.toggle('light');
+  const isLight = root.classList.toggle('light');
+  try {
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  } catch (e) {}
 }
 
 dot.addEventListener('click', () => {

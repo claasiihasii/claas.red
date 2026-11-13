@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="de">
 
-	<head>
-		<title>claas.red</title>
-		<meta charset="utf-8">
-		<meta name="description" content="67">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="./style.css">
-		<link rel="icon" type="image/x-icon" href="./CZ-favicon.svg">
+<head>
+	<title>claas.red</title>
+	<meta charset="utf-8">
+	<meta name="description" content="67">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
+	<link rel="icon" type="image/x-icon" href="./CZ-favicon.svg">
 
-		
+	<script>
+		try {
+			const saved = localStorage.getItem('theme');
+			const prefersLight = matchMedia('(prefers-color-scheme: light)').matches;
+			if (saved === 'light' || (!saved && prefersLight)) {
+			document.documentElement.classList.add('light');
+			}
+		} catch (e) {}
+	</script>
+
+</head>
 	
-	</head>
-	
-	<body>
+<body>
 
-		<div class="header">
-				
-			<button class="dot" aria-label="Menü öffnen"></button>
-				
-		</div>
+	<div class="header">
+			
+		<button class="dot" aria-label="Menü öffnen"></button>
+			
+	</div>
 
-		<div class="main">
+	<div class="main">
+			
+		<div class="mail">
 				
-			<div class="mail">
-					
-				<p>
-					Claas 
-					<span class="surname">Zülow</span>
-					<br>
-					<a href="mailto:claaszuelow@outlook.com">claaszuelow@outlook.com</a>
-				</p>
-			</div>
-							
+			<p>
+				Claas 
+				<span class="surname">Zülow</span>
+				<br>
+				<a href="mailto:claaszuelow@outlook.com">claaszuelow@outlook.com</a>
+			</p>
 		</div>
 		
+		<nav class="footer-nav" aria-label="Seitennavigation">
+			<a href="#">Main</a>
+			<a id="vcard" href="//vcard.claas.red/">Visitenkarte</a>
+		</nav>
+		
+	</div>
+	
 
-		<script src="./dot.js"></script>
-	</body>
+	<script src="./dot.js"></script>
+</body>
 	
 </html>
